@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiscal do Cerrado</title>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            keyframes: {
+              'fade-in-up': {
+                  '0%': { opacity: '0', transform: 'translateY(10px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'toast-in': {
+                  '0%': { opacity: '0', transform: 'translateY(20px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.3s ease-out',
+              'toast-in': 'toast-in 0.5s ease-out',
+            },
+            colors: {
+              'brand-green': {
+                light: '#A8D5BA',
+                DEFAULT: '#5E9A78',
+                dark: '#3A6B4B',
+              },
+              'brand-brown': {
+                light: '#E6D5B8',
+                DEFAULT: '#C3A995',
+                dark: '#A4846C',
+              },
+              'brand-orange': {
+                DEFAULT: '#F0A500',
+                dark: '#D48806',
+              },
+              'brand-bg': {
+                light: '#F8F4E3',
+                dark: '#2C3E50',
+              },
+              'brand-surface': {
+                light: '#FFFFFF',
+                dark: '#34495E',
+              },
+              'brand-text': {
+                light: '#2c3e50',
+                dark: '#ECF0F1',
+              },
+              'brand-text-secondary': {
+                light: '#7f8c8d',
+                dark: '#bdc3c7',
+              }
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-brand-bg-light dark:bg-brand-bg-dark transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
